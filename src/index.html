@@ -6,13 +6,20 @@
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
 <header class="page-header">
   <div class="container">
     <div class="page-header__inner">
-      <img src="#" alt="Brume" class="page-header__logo">
+      <figure class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.png">
+          <source media="(min-width: 660px)" srcset="img/logo-tablet.png">
+          <img src="img/logo-mobile.png" alt="Brume" width="77" height="23" class="page-header__img">
+        </picture>
+      </figure>
       <button class="page-header__toggle" type="button">
         <span></span><span></span><span></span>
       </button>
