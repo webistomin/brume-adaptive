@@ -39,7 +39,7 @@
 <img src="mockup/mockup.png">
 
 [travis-image]: https://travis-ci.org/webistomin/brume-adaptive.svg?branch=master
-[travis-url]: https://travis-ci.org/webistomin/brume-interior
-[dependency-image]: https://david-dm.org/webistomin/brume-interior/dev-status.svg
-[dependency-url]: https://david-dm.org/webistomin/brume-interior
+[travis-url]: https://travis-ci.org/webistomin/brume-adaptive
+[dependency-image]: https://david-dm.org/webistomin/brume-adaptive/dev-status.svg
+[dependency-url]: https://david-dm.org/webistomin/brume-adaptive
 
