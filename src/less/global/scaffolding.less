@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Oswald', 'Arial', sans-serif;
-  font-weight: 400;
-  color: @color-text--black;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  font-weight: 300;
+  color: @color-text;
 }
 
 img {
@@ -18,7 +18,7 @@ ul {
 }
 
 a {
-  color: @color-text--white;
+  color: @color-text--second;
   text-decoration: none;
 }
 
@@ -45,129 +45,3 @@ button {
 *:focus {
   outline: thin dotted;
 }
-
-.comparison-widget {
-  display: inline-block;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  overflow: hidden;
-  vertical-align: top;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.comparison-widget * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.comparison-widget:hover .comparison-separator {
-  opacity: 1;
-}
-.comparison-widget:hover .comparison-control {
-  opacity: 1;
-}
-.comparison-widget:hover .comparison-control:before,
-.comparison-widget:hover .comparison-control:after {
-  opacity: 1;
-}
-.comparison-widget--hidden {
-  opacity: 0;
-}
-.comparison-item {
-  height: 100%;
-  width: 100%;
-  background-color: @color-grey;
-
-  @media @screen-sm {
-    background-color: transparent;
-  }
-}
-.comparison-item--first {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.comparison-item__content {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.comparison-item--first .comparison-image {
-  width: auto;
-  max-width: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.comparison-item__image {
-  display: block;
-  max-width: 100%;
-  -webkit-user-drag: none;
-}
-
-.comparison-separator {
-  width: 6px;
-  height: 100%;
-  position: absolute;
-  right: -1px;
-  top: 0;
-  z-index: 10;
-  background: #FFF;
-  cursor: pointer;
-  border: 1px solid #cdcdcd;
-  border-radius: 27px;
-
-  @media @screen-md {
-    width: 10px;
-  }
-}
-.comparison-control {
-  width: 12px;
-  height: 12px;
-  margin-top: -6px;
-  margin-left: -6px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: @color-green;
-  border-radius: 100%;
-
-  @media @screen-md {
-    width: 18px;
-    height: 18px;
-    left: 20%;
-  }
-}
-.comparison-control:before,
-.comparison-control:after {
-  content: '';
-  display: block;
-  width: 12px;
-  height: 20px;
-  margin-top: -10px;
-  position: absolute;
-  top: 50%;
-}
-.comparison-control:before {
-  left: -15px;
-}
-.comparison-control:after {
-  right: -15px;
-  background-position: -12px 0px;
-}
-.comparison-control__mask {
-  width: 50px;
-  height: 40px;
-  position: absolute;
-  top: -15px;
-  left: -18px;
-  background: #FFF;
-  opacity: 0;
-}
-
