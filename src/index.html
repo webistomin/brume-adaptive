@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.2/min/tiny-slider.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.2/tiny-slider.css">
+
 </head>
 <body>
 <!-- this svg is a container for svg icons and should not appear on the page.
@@ -112,13 +115,13 @@ To emphasise this I use inline style="display: none" -->
   <section class="portfolio">
     <div class="container">
       <h2 class="portfolio__title title">Портфолио</h2>
-      <ul class="portfolio__tabs">
-        <li class="portfolio__tab portfolio__tab--active"><a href="#" class="portfolio__tab-link">Все проекты</a></li>
-        <li class="portfolio__tab"><a href="#" class="portfolio__tab-link">Дизайн интерьеров</a></li>
-        <li class="portfolio__tab"><a href="#" class="portfolio__tab-link">Отделочные работы</a></li>
+      <ul class="portfolio__tabs" data-tabs>
+        <li class="portfolio__tab active"><a data-tab href="#all" class="portfolio__tab-link">Все проекты</a></li>
+        <li class="portfolio__tab"><a data-tab href="#design" class="portfolio__tab-link">Дизайн интерьеров</a></li>
+        <li class="portfolio__tab"><a data-tab href="#completion" class="portfolio__tab-link">Отделочные работы</a></li>
       </ul>
-      <div class="portfolio__content">
-        <ul class="portfolio__list">
+      <div class="portfolio__content" data-tabs-content>
+        <ul class="portfolio__list tabs-pane active" data-tabs-pane id="all">
           <li class="portfolio__item">
             <figure class="portfolio__image">
               <picture>
@@ -132,21 +135,125 @@ To emphasise this I use inline style="display: none" -->
           </li>
           <li class="portfolio__item">
             <figure class="portfolio__image">
-              <img src="#" alt="#" class="portfolio__img">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
               <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
             </figure>
           </li>
           <li class="portfolio__item">
             <figure class="portfolio__image">
-              <img src="#" alt="#" class="portfolio__img">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
               <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
             </figure>
           </li>
           <li class="portfolio__item">
             <figure class="portfolio__image">
-              <img src="#" alt="#" class="portfolio__img">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+        </ul>
+        <ul class="portfolio__list tabs-pane" data-tabs-pane id="design">
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+        </ul>
+        <ul class="portfolio__list tabs-pane" data-tabs-pane id="#completion">
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
               <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
             </figure>
@@ -352,5 +459,39 @@ To emphasise this I use inline style="display: none" -->
 </footer>
 
 <script src="js/script.min.js" defer></script>
+<script type="module">
+  var slider = tns({
+    container: '#all',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: false,
+    autoplayButtonOutput: false,
+    edgePadding: 15,
+    gutter: 10
+  });
+
+  var slider2 = tns({
+    container: '#design',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: false,
+    autoplayButtonOutput: false,
+    edgePadding: 15,
+    gutter: 10
+  });
+
+  var slider3 = tns({
+    container: '#completion',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: false,
+    autoplayButtonOutput: false,
+    edgePadding: 15,
+    gutter: 10
+  });
+</script>
 </body>
 </html>
