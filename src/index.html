@@ -113,15 +113,19 @@ To emphasise this I use inline style="display: none" -->
     <div class="container">
       <h2 class="portfolio__title title">Портфолио</h2>
       <ul class="portfolio__tabs">
-        <li class="portfolio__tab portfolio__tab--active">Все проекты</li>
-        <li class="portfolio__tab">Дизайн интерьеров</li>
-        <li class="portfolio__tab">Отделочные работы</li>
+        <li class="portfolio__tab portfolio__tab--active"><a href="#" class="portfolio__tab-link">Все проекты</a></li>
+        <li class="portfolio__tab"><a href="#" class="portfolio__tab-link">Дизайн интерьеров</a></li>
+        <li class="portfolio__tab"><a href="#" class="portfolio__tab-link">Отделочные работы</a></li>
       </ul>
       <div class="portfolio__content">
         <ul class="portfolio__list">
           <li class="portfolio__item">
             <figure class="portfolio__image">
-              <img src="#" alt="#" class="portfolio__img">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/portfolio-slide-1-desktop.jpg">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
+                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+              </picture>
               <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
             </figure>
