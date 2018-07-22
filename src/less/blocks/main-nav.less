@@ -7,11 +7,15 @@
   z-index: 2;
 
   &--closed {
-    display: none;
-  }
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+   }
 
   &--opened {
-    display: block;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.3s ease-in-out;
   }
 
   &__list {
@@ -29,6 +33,7 @@
   &__link {
     display: block;
     font-family: 'Raleway', 'Arial', sans-serif;
+    font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 42px;

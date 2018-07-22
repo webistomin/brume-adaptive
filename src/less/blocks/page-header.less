@@ -45,6 +45,7 @@
       height: 3px;
       background-color: @color-text--second;
       border-radius: 27px;
+      transition: all 0.3s ease-in-out;
 
       &:first-child {
         top: 0;
@@ -55,7 +56,27 @@
       }
 
       &:last-child {
-        bottom: 0;
+        top: 22px;
+      }
+    }
+
+    &--opened {
+      & span {
+        transition: all 0.3s ease-in-out;
+
+        &:first-child {
+          transform: rotate(45deg);
+          top: 8px;
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
       }
     }
   }
