@@ -3,6 +3,8 @@
 
   &__list {
     counter-reset: featureNumber;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   &__item {
@@ -13,7 +15,7 @@
     &::before {
       content: counters(featureNumber, ".", decimal-leading-zero);
       position: absolute;
-      top: 0;
+      top: -10px;
       left: 0;
       font-family: "Playfair Display", sans-serif;
       font-weight: 700;
