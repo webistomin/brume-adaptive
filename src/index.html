@@ -7,9 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.2/min/tiny-slider.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.2/tiny-slider.css">
-
 </head>
 <body>
 <!-- this svg is a container for svg icons and should not appear on the page.
@@ -412,7 +410,8 @@ To emphasise this I use inline style="display: none" -->
 
   <section class="testimonials">
     <div class="container">
-      <ul class="testimonials__list">
+      <h2 class="testimonials__title title">Отзывы наших клиентов</h2>
+      <ul class="testimonials__list" id="#testimonials">
         <li class="testimonials__item">
           <div class="testimonials__column">
             <span class="testimonials__name">Александра Холодная</span>
@@ -462,40 +461,7 @@ To emphasise this I use inline style="display: none" -->
   </div>
 </footer>
 
+
 <script src="js/script.min.js" defer></script>
-<script type="module">
-  var slider = tns({
-    container: '#all',
-    items: 1,
-    slideBy: 'page',
-    autoplay: true,
-    controls: false,
-    autoplayButtonOutput: false,
-    edgePadding: 15,
-    gutter: 10
-  });
-
-  var slider2 = tns({
-    container: '#design',
-    items: 1,
-    slideBy: 'page',
-    autoplay: true,
-    controls: false,
-    autoplayButtonOutput: false,
-    edgePadding: 15,
-    gutter: 10
-  });
-
-  var slider3 = tns({
-    container: '#completion',
-    items: 1,
-    slideBy: 'page',
-    autoplay: true,
-    controls: false,
-    autoplayButtonOutput: false,
-    edgePadding: 15,
-    gutter: 10
-  });
-</script>
 </body>
 </html>
