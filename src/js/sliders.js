@@ -2,6 +2,8 @@ var tns=function(){var t=window,vi=t.requestAnimationFrame||t.webkitRequestAnima
 
 
 
+
+
 var slider = tns({
   container: '#all',
   items: 1,
