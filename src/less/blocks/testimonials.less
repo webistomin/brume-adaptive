@@ -8,10 +8,13 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   &__name {
@@ -45,13 +48,14 @@
   }
 
   &__column {
+    padding-top: 180px;
     order: 2;
   }
 
   &__img {
+    position: absolute;
     max-width: 215px;
-    margin-top: -38px;
-    margin-bottom: 36px;
+    top: -38px;
   }
 
   &__item {
