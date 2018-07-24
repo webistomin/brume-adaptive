@@ -44,6 +44,8 @@ var slider4 = tns({
   autoplay: true,
   controls: false,
   autoplayButtonOutput: false,
-  edgePadding: 15,
-  gutter: 10
+  lazyload: true,
+  nav: true,
+  navContainer: '.testimonials__pagination',
+  controlsContainer: '.testimonials__pagination',
 });
