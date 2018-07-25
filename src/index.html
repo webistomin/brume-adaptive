@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.2/tiny-slider.css">
 </head>
 <body>
 <!-- this svg is a container for svg icons and should not appear on the page.
@@ -411,41 +410,44 @@ To emphasise this I use inline style="display: none" -->
   <section class="testimonials">
     <div class="container">
       <h2 class="testimonials__title title">Отзывы наших клиентов</h2>
-      <ul class="testimonials__list" id="testimonials">
-        <li class="testimonials__item">
-          <div class="testimonials__inner">
-            <div class="testimonials__column">
-              <span class="testimonials__name">Александра Холодная</span>
-              <span class="testimonials__category">Услуга: инерьер детской</span>
-              <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
-                В следующий раз обратимся к BRUME!</p>
+      <div class="testimonials__wrapper">
+        <ul class="testimonials__list" id="testimonials">
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
             </div>
-            <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
-          </div>
-        </li>
-        <li class="testimonials__item">
-          <div class="testimonials__inner">
-            <div class="testimonials__column">
-              <span class="testimonials__name">Александра Холодная</span>
-              <span class="testimonials__category">Услуга: инерьер детской</span>
-              <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
-                В следующий раз обратимся к BRUME!</p>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
             </div>
-            <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
-          </div>
-        </li>
-        <li class="testimonials__item">
-          <div class="testimonials__inner">
-            <div class="testimonials__column">
-              <span class="testimonials__name">Александра Холодная</span>
-              <span class="testimonials__category">Услуга: инерьер детской</span>
-              <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
-                В следующий раз обратимся к BRUME!</p>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
             </div>
-            <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
       <ul class="testimonials__pagination">
         <li class="testimonials__page"></li>
         <li class="testimonials__page"></li>
@@ -487,6 +489,47 @@ To emphasise this I use inline style="display: none" -->
 </footer>
 
 
-<script src="js/script.min.js" defer></script>
+<script
+  src="https://code.jquery.com/jquery-1.11.0.min.js"
+  integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="js/script.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.testimonials__list').slick({
+      autoplay: true,
+      arrows: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+          }
+        }]
+  });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.portfolio__list').slick({
+      autoplay: true,
+      arrows: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+          }
+        }]
+    });
+  });
+</script>
 </body>
 </html>
