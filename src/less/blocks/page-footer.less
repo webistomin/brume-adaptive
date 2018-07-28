@@ -45,4 +45,26 @@
     line-height: 30px;
     color: #ffc487;
   }
+
+  @media @screen-sm {
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__copyright {
+      order: 1;
+      margin: 0;
+    }
+
+    &__inner {
+      order: 2;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
 }

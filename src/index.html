@@ -466,8 +466,13 @@ To emphasise this I use inline style="display: none" -->
     <div class="page-footer__wrapper">
       <small class="page-footer__copyright">BRUME interior, 2017 ©</small>
       <div class="page-footer__inner">
-        <img src="img/logo-mobile.png" alt="#" class="page-footer__logo">
-        <section class="socials">
+        <figure class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 660px)" srcset="img/logo-tablet.png">
+            <img src="img/logo-mobile.png" alt="Brume" width="77" height="23" class="page-footer__img">
+          </picture>
+        </figure>        <section class="socials">
           <ul class="socials__list">
             <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
               <svg class="socials__icon" width="23" height="23">
