@@ -12,13 +12,14 @@
     display: block;
     padding-top: 13px;
     padding-bottom: 13px;
-    color: #bababa;
+    color: #7d7d7d;
     font-family: 'Raleway', 'Arial', sans-serif;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 22px;
 
     &:hover {
       color: @color-text;
+      font-weight: 600;
     }
 
     &:active {
@@ -61,6 +62,81 @@
     &:hover {
       color: @color-text--second;
       border-color: @color-text--second;
+    }
+  }
+
+  @media @screen-sm {
+    &__title {
+      font-size: 45px;
+      text-align: left;
+    }
+
+    &__tab {
+      width: 50%;
+      margin-bottom: 20px;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &__tabs {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__item {
+      h3 {
+        display: block;
+      }
+    }
+
+    &__title {
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      color: #00203a;
+      letter-spacing: 0.025em;
+      margin-bottom: 0;
+    }
+
+    &__counter {
+      display: block;
+      font-family: 'Raleway', 'Arial', sans-serif;
+      font-weight: 400;
+      font-size: 25px;
+      letter-spacing: 0.025em;
+      line-height: 30px;
+    }
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      &--row {
+        flex-direction: column;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      text-align: left;
+      width: 530px;
+      margin-right: auto;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 36px;
+    }
+
+    &__btn {
+      margin: 0;
+      margin-right: auto;
     }
   }
 }
