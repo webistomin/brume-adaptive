@@ -32,7 +32,7 @@
     width: 84px;
     height: 84px;
     border-radius: 50%;
-    background-color: @color-light-orange;
+    background-color: #f2b47c;
     margin-bottom: 32px;
     transition: all 0.2s ease-in-out;
 
@@ -58,5 +58,19 @@
     font-size: 22px;
     line-height: 30px;
     text-align: center;
+  }
+
+  @media @screen-sm {
+    min-height: 816px;
+    background-image: url("../img/video-tablet.jpg");
+
+    &__btn {
+      width: 128px;
+      height: 128px;
+    }
+
+    &__desc {
+      width: 436px;
+    }
   }
 }
