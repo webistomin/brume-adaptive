@@ -44,4 +44,44 @@
     line-height: 25px;
     color: @color-text--third;
   }
+
+  @media @screen-sm {
+    padding-top: 120px;
+
+    &__title {
+      font-size: 45px;
+      text-align: left;
+    }
+
+    &__item {
+      width: 37%;
+      max-width: 345px;
+      padding-left: 76px;
+      counter-increment: workNumber;
+      position: relative;
+
+      &::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: counter(workNumber);
+        position: absolute;
+        left: 24px;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        background-color: #fde5d1;
+        border-radius: 50%;
+        font-family: 'Raleway', 'Arial', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+
+    &__list {
+      counter-reset: workNumber;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
