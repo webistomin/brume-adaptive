@@ -80,4 +80,44 @@
       }
     }
   }
+
+  @media @screen-sm {
+
+    background-image: url("../img/header-slide-tablet.jpg");
+
+    &__inner {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &__toggle {
+      width: 66px;
+      height: 35px;
+
+      & span {
+        height: 6px;
+
+        &:nth-child(2) {
+          top: 14px;
+        }
+
+        &:last-child {
+          top: 28px;
+        }
+      }
+
+      &--opened {
+        & span {
+
+          &:first-child {
+            top: 10px;
+          }
+
+          &:last-child {
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
 }
