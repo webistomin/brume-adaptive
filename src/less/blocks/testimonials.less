@@ -90,4 +90,45 @@
       opacity: 0.1;
     }
   }
+
+  @media @screen-sm {
+    &__title {
+      font-size: 45px;
+      text-align: left;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: none;
+    }
+
+    &__inner {
+      flex-direction: row;
+      padding-top: 50px;
+      align-items: flex-start;
+    }
+
+    &__img {
+      position: relative;
+      top: initial;
+      order: 2;
+      margin-left: 34px;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+      align-items: flex-start;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__name {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
 }
