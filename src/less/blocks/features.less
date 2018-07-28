@@ -45,4 +45,19 @@
     font-size: 18px;
     line-height: 25px;
   }
+
+  @media @screen-sm {
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 50%;
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+    }
+  }
 }
