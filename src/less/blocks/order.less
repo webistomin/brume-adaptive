@@ -83,4 +83,42 @@
     border: none;
     margin-bottom: 18px;
   }
+
+  @media @screen-sm {
+
+    &__title {
+      font-size: 45px;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 35px;
+
+      &--small {
+        font-family: 'Raleway', 'Arial', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+
+    &__input {
+      width: 472px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 472px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      font-size: 18px;
+      line-height: 16px;
+    }
+  }
 }
