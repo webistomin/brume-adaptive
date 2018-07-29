@@ -64,4 +64,69 @@
       font-size: 20px;
     }
   }
+
+  @media @screen-lg {
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__tabs {
+      justify-content: flex-start;
+      margin-bottom: 40px;
+    }
+
+    &__tab {
+      margin-right: 60px;
+      position: relative;
+    }
+
+    &__item {
+      min-height: 550px;
+      position: relative;
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        background-color: #00203a;
+        opacity: 0.8;
+      }
+
+      &:hover {
+        &::before {
+          display: none;
+        }
+
+        & .portfolio__caption {
+          display: none;
+        }
+
+        & .portfolio__category {
+          display: none;
+        }
+      }
+    }
+
+    &__caption {
+      text-align: left;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      color: @color-text--second;
+      z-index: 1;
+    }
+
+    &__category {
+      display: block;
+      position: absolute;
+      font-family: Muller, sans-serif;
+      font-weight: 200;
+      color: @color-text--second;
+      font-size: 14px;
+      transform: rotate(-90deg);
+      bottom: 85px;
+      left: -25px;
+    }
+  }
 }
