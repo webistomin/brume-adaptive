@@ -65,4 +65,30 @@
       line-height: 42px;
     }
   }
+
+  @media @screen-lg {
+    .container();
+    min-height: 596px;
+    height: auto;
+    top: initial;
+    left: 50%;
+
+    &--closed {
+      transform: scaleY(0) translateX(-50%);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &--opened {
+      transform-origin: top;
+      transform: scaleY(1) translateX(-50%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+
+
+    &__list {
+      margin-top: 0;
+    }
+  }
 }
