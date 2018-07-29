@@ -127,14 +127,17 @@
 
   @media @screen-lg {
     background-image: none;
+    background-color: @color-bg;
 
     &::before {
       width: 50%;
+      z-index: 1;
     }
 
     &__inner {
       padding-top: 28px;
       padding-bottom: 27px;
+      z-index: 1;
     }
 
     &__link {
