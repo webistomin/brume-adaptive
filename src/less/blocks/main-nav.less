@@ -72,6 +72,11 @@
     height: auto;
     top: initial;
     left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 
     &--closed {
       transform: scaleY(0) translateX(-50%);
@@ -83,12 +88,26 @@
       transform-origin: top;
       transform: scaleY(1) translateX(-50%);
       transition: transform 0.3s ease-in-out;
+      box-shadow: 0px 7px 6.56px 1.44px rgba(0, 0, 0, 0.07);
     }
-
-
 
     &__list {
       margin-top: 0;
+      width: 100%;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 42px;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
