@@ -29,7 +29,7 @@
   }
 
   &__link {
-    .visually-hidden();
+    display: none;
   }
 
   &__toggle {
@@ -122,6 +122,53 @@
 
     &__img {
       width: 100%;
+    }
+  }
+
+  @media @screen-lg {
+    background-image: none;
+
+    &::before {
+      width: 50%;
+    }
+
+    &__inner {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__link {
+      display: block;
+      font-family: Muller, sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      color: #252525;
+      letter-spacing: 0.075em;
+      order: 3;
+    }
+
+    &__toggle {
+      width: 28px;
+      height: 20px;
+      order: 1;
+
+      & span {
+        height: 2px;
+
+        &:nth-child(2) {
+          top: 9px;
+        }
+
+        &:last-child {
+          top: 18px;
+        }
+      }
+    }
+
+    &__logo {
+      order: 2;
+      padding-left: 114px;
     }
   }
 }

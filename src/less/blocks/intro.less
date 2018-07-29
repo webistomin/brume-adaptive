@@ -3,6 +3,10 @@
   position: relative;
   padding-bottom: 87px;
 
+  &__slider {
+    display: none;
+  }
+
   &__title {
     margin-bottom: 26px;
   }
@@ -109,5 +113,28 @@
     &__button {
       margin-top: 100px;
     }
+  }
+
+  @media @screen-lg {
+    margin-top: 0;
+    position: relative;
+
+    &__container {
+      &--relative {
+        position: relative;
+      }
+    }
+
+    &__slider {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/header-slide-desktop.jpg");
+      z-index: -1;
+      box-sizing: border-box;
+      left: 0;
+    }
+
   }
 }
