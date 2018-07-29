@@ -60,4 +60,33 @@
       }
     }
   }
+
+  @media @screen-lg {
+    &__item {
+      max-width: 250px;
+
+      &:nth-child(even) {
+        margin-left: initial;
+        margin-top: 245px;
+      }
+    }
+
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__heading {
+      font-size: 22px;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
 }
