@@ -97,7 +97,7 @@
 
     &__title {
       font-family: "Playfair Display", sans-serif;
-      font-weight: 400;
+      font-weight: 700;
       font-size: 30px;
       color: #00203a;
       letter-spacing: 0.025em;
@@ -146,5 +146,73 @@
     &__content {
       padding-bottom: 200px;
     }
+  }
+
+  @media @screen-lg {
+    padding-top: 100px;
+
+    &__title {
+      font-size: 45px;
+      margin-bottom: 50px;
+    }
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__tabs {
+      width: 290px;
+      flex-direction: column;
+    }
+
+    &__tab {
+      width: auto;
+
+      br {
+        display: block;
+      }
+    }
+
+    &__content {
+      margin-top: 0;
+    }
+
+    &__item {
+      h3 {
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__inner {
+      margin-top: 50px;
+
+      &--row {
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    &__btn {
+      width: 216px;
+      margin: 0;
+      font-size: 15px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &__counter {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &__text {
+      width: 500px;
+      margin: 0;
+    }
+
+
   }
 }
