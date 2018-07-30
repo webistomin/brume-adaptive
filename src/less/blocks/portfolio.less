@@ -43,6 +43,10 @@
     font-size: 18px;
   }
 
+  &__btn {
+    display: none;
+  }
+
   @media @screen-sm {
     &__title {
       font-size: 45px;
@@ -105,6 +109,10 @@
         & .portfolio__category {
           display: none;
         }
+
+        & .portfolio__btn {
+          display: block;
+        }
       }
     }
 
@@ -126,7 +134,41 @@
       font-size: 14px;
       transform: rotate(-90deg);
       bottom: 85px;
-      left: -25px;
+      left: -35px;
+    }
+
+    &__btn {
+      display: none;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background-color: #fcbd84;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 27px;
+        height: 2px;
+        background-color: @color-text--second;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 27px;
+        height: 2px;
+        background-color: @color-text--second;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      }
     }
   }
 }
