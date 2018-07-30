@@ -121,4 +121,47 @@
       line-height: 16px;
     }
   }
+
+  @media @screen-lg {
+    background-image: url("../img/order-desktop.jpg");
+    min-height: initial;
+    padding-bottom: 80px;
+    background-size: contain;
+
+    &::before {
+      width: 50%;
+      opacity: 1;
+    }
+
+    &__form {
+      padding-top: 60px;
+      width: 50%;
+      padding-right: 100px;
+      box-sizing: border-box;
+    }
+
+    &__title {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      margin-bottom: 26px;
+    }
+
+    &__input {
+      width: 100%;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      margin-top: 46px;
+      width: 100%;
+    }
+  }
 }
