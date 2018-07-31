@@ -5,6 +5,12 @@
   position: relative;
   min-height: 608px;
 
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image: url("../img/header-slide-mobile@2x.jpg");
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -84,6 +90,12 @@
   @media @screen-sm {
 
     background-image: url("../img/header-slide-tablet.jpg");
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/header-slide-tablet@2x.jpg");
+    }
 
     &__inner {
       padding-top: 60px;

@@ -6,6 +6,12 @@
   justify-content: center;
   align-items: center;
 
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -64,6 +70,12 @@
     min-height: 816px;
     background-image: url("../img/video-tablet.jpg");
 
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+
     &__btn {
       width: 128px;
       height: 128px;
@@ -76,6 +88,12 @@
 
   @media @screen-lg {
     background-image: url("../img/video-desktop.jpg");
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
 
     &__desc {
       width: auto;

@@ -141,6 +141,12 @@
       z-index: 0;
       box-sizing: border-box;
       left: 0;
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-image: url("../img/header-slide-desktop@2x.jpg");
+      }
     }
 
     &__inner {

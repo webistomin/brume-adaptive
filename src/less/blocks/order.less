@@ -3,6 +3,12 @@
   background-image: url("../img/order-mobile.jpg");
   min-height: 912px;
 
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image: url("../img/order-mobile@2x.jpg");
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -85,6 +91,13 @@
   }
 
   @media @screen-sm {
+    background-image: url("../img/order-tablet.jpg");
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/order-tablet@2x.jpg");
+    }
 
     &__title {
       font-size: 45px;
@@ -127,6 +140,12 @@
     min-height: initial;
     padding-bottom: 80px;
     background-size: contain;
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      background-image: url("../img/order-desktop@2x.jpg");
+    }
 
     &::before {
       width: 50%;
