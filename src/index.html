@@ -31,9 +31,13 @@ To emphasise this I use inline style="display: none" -->
     <div class="page-header__inner">
       <figure class="page-header__logo">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
-          <source media="(min-width: 660px)" srcset="img/logo-tablet.png">
-          <img src="img/logo-mobile.png" alt="Brume" width="77" height="23" class="page-header__img">
+          <source type="image/webp" media="(min-width: 1180px)" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+          <img class="page-header__image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Brume">
         </picture>
       </figure>
       <button class="page-header__toggle" type="button">
@@ -127,9 +131,13 @@ To emphasise this I use inline style="display: none" -->
           <li class="portfolio__item">
             <figure class="portfolio__image">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg">
-                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
-                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+                <source type="image/webp" media="(min-width: 1180px)" srcset="img/portfolio-slide-1-desktop.webp 1x, img/portfolio-slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg 1x, img/portfolio-slide-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
               </picture>
               <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
@@ -139,9 +147,13 @@ To emphasise this I use inline style="display: none" -->
           <li class="portfolio__item">
             <figure class="portfolio__image">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg">
-                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
-                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+                <source type="image/webp" media="(min-width: 1180px)" srcset="img/portfolio-slide-2-desktop.webp 1x, img/portfolio-slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.jpg 1x, img/portfolio-slide-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
               </picture>
               <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
@@ -152,9 +164,13 @@ To emphasise this I use inline style="display: none" -->
           <li class="portfolio__item">
             <figure class="portfolio__image">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg">
-                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
-                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+                <source type="image/webp" media="(min-width: 1180px)" srcset="img/portfolio-slide-3-desktop.webp 1x, img/portfolio-slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.jpg 1x, img/portfolio-slide-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
               </picture>
               <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
@@ -165,9 +181,13 @@ To emphasise this I use inline style="display: none" -->
           <li class="portfolio__item">
             <figure class="portfolio__image">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg">
-                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg">
-                <img src="img/portfolio-slide-mobile.jpg" alt="Brume" width="260" height="529" class="page-header__img">
+                <source type="image/webp" media="(min-width: 1180px)" srcset="img/portfolio-slide-4-desktop.webp 1x, img/portfolio-slide-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.jpg 1x, img/portfolio-slide-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
               </picture>
               <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
               <span class="portfolio__category">Дизайн интерьеров</span>
@@ -287,9 +307,13 @@ To emphasise this I use inline style="display: none" -->
         <div class="services__content" data-tabs-content>
           <div class="services__item tabs-pane active" id="livingrooms">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -303,9 +327,13 @@ To emphasise this I use inline style="display: none" -->
           </div>
           <div class="services__item tabs-pane" id="rooms">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -319,9 +347,13 @@ To emphasise this I use inline style="display: none" -->
           </div>
           <div class="services__item tabs-pane" id="commercial">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -335,9 +367,13 @@ To emphasise this I use inline style="display: none" -->
           </div>
           <div class="services__item tabs-pane" id="repair">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -351,9 +387,13 @@ To emphasise this I use inline style="display: none" -->
           </div>
           <div class="services__item tabs-pane" id="completion-work">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -367,9 +407,13 @@ To emphasise this I use inline style="display: none" -->
           </div>
           <div class="services__item tabs-pane" id="departure">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg">
-              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg">
-              <img src="img/services-slide-mobile.jpg" alt="Brume" width="260" height="529" class="services__img">
+              <source type="image/webp" media="(min-width: 1180px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
             </picture>
             <div class="services__inner">
               <h3 class="services__title title">Дизайн комерческих объетов</h3>
@@ -458,7 +502,10 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
+              <picture>
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
             </div>
           </li>
           <li class="testimonials__item">
@@ -469,7 +516,10 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
+              <picture>
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
             </div>
           </li>
           <li class="testimonials__item">
@@ -480,7 +530,10 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <img src="img/testimonials-mobile.jpg" alt="#" class="testimonials__img">
+              <picture>
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
             </div>
           </li>
         </ul>
@@ -502,9 +555,13 @@ To emphasise this I use inline style="display: none" -->
       <div class="page-footer__inner">
         <figure class="page-footer__logo">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
-            <source media="(min-width: 660px)" srcset="img/logo-tablet.png">
-            <img src="img/logo-mobile.png" alt="Brume" width="77" height="23" class="page-footer__img">
+            <source type="image/webp" media="(min-width: 1180px)" srcset="img/logo-footer-desktop.webp 1x, img/logo-footer-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/logo-footer-desktop.png 1x, img/logo-footer-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+            <img class="page-footer__img" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Brume">
           </picture>
         </figure>
         <section class="socials socials--footer">
