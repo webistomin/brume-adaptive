@@ -154,6 +154,7 @@
 
     &__link {
       display: block;
+      position: relative;
       font-family: Muller, sans-serif;
       font-weight: 300;
       font-size: 14px;
@@ -169,6 +170,15 @@
       &:active {
         opacity: 0.6;
       }
+    }
+
+
+    &__icon {
+      position: absolute;
+      fill: @color-text;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
     }
 
     &__toggle {
@@ -206,5 +216,6 @@
       order: 2;
       padding-left: 114px;
     }
+
   }
 }

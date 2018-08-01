@@ -151,6 +151,8 @@
       top: 50%;
       transform: translateY(-50%) translateX(-50%);
       background-color: #fcbd84;
+      transition: all 0.3s ease-in-out;
+
 
       &::before {
         content: "";
@@ -172,6 +174,16 @@
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%) rotate(90deg);
+      }
+
+      &:hover {
+        transform: translateY(-50%) translateX(-50%) scale(1.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:active {
+        transform: translateY(-50%) translateX(-50%) scale(0.9);
+        transition: all 0.3s ease-in-out;
       }
     }
   }

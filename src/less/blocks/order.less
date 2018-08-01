@@ -87,9 +87,10 @@
       border-bottom-color: #ffffff;
     }
 
-    &:invalid {
-      border-color: rgba(255, 0, 0, 0.7);
+    &:valid {
+      border-color: lightgreen;
     }
+
   }
 
   &__btn {
@@ -194,6 +195,12 @@
       padding-left: 10px;
 
       &:hover + .order__icon {
+        opacity: 1;
+      }
+
+
+      &:valid + .order__icon {
+        fill: lightgreen;
         opacity: 1;
       }
     }
