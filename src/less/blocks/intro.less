@@ -136,18 +136,9 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: url("../img/header-slide-desktop.jpg");
-      background-position: center center;
-      background-size: cover;
       z-index: 0;
       box-sizing: border-box;
       left: 0;
-
-      @media
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi) {
-        background-image: url("../img/header-slide-desktop@2x.jpg");
-      }
     }
 
     &__inner {
@@ -182,6 +173,19 @@
     &__button {
       display: none;
     }
+
+    &__pic {
+      margin: 0;
+    }
+
+    &__pagination {
+      min-width: 200px;
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+    }
+
+
 
   }
 }
