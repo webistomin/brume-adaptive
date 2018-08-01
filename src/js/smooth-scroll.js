@@ -625,4 +625,4 @@
 
 });
 
-var scroll = new SmoothScroll('a[href*="#"]:not([data-tab])');
+var scroll = new SmoothScroll('a[data-scroll]:not([data-tab])');
