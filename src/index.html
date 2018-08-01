@@ -593,9 +593,24 @@ To emphasise this I use inline style="display: none" -->
       <form action="" class="order__form">
         <h2 class="order__title title">Мечтаете об интерьере от BRUME?</h2>
         <p class="order__text">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</p>
-        <input type="text" class="order__input" placeholder="Имя*">
-        <input type="tel" class="order__input" placeholder="Телефон*">
-        <input type="email" class="order__input" placeholder="E-mail*">
+        <label class="order__label" for="order-name">
+          <input type="text" class="order__input" id="order-name" placeholder="Имя*">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-user"></use>
+          </svg>
+        </label>
+        <label class="order__label" for="order-phone">
+          <input type="tel" class="order__input" id="order-phone" placeholder="Телефон*">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-number"></use>
+          </svg>
+        </label>
+        <label class="order__label" for="order-mail">
+          <input type="email" class="order__input" id="order-mail" placeholder="E-mail*">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-mail"></use>
+          </svg>
+        </label>
         <button class="order__btn btn" type="submit">Отправить</button>
         <p class="order__text order__text--small">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
       </form>

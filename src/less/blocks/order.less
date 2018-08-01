@@ -19,6 +19,21 @@
     z-index: 0;
   }
 
+  &__label {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 36px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    display: none;
+  }
+
   &__form {
     padding-top: 78px;
     position: relative;
@@ -48,7 +63,6 @@
 
   &__input {
     width: 100%;
-    margin-bottom: 36px;
     padding-top: 15px;
     padding-bottom: 15px;
     box-sizing: border-box;
@@ -64,9 +78,6 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     background-color: transparent;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.8);
@@ -116,7 +127,7 @@
       }
     }
 
-    &__input {
+    &__label {
       width: 472px;
     }
 
@@ -171,11 +182,20 @@
       margin-bottom: 26px;
     }
 
-    &__input {
+    &__label {
       width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &__input {
       font-size: 14px;
       line-height: 16px;
-      margin-bottom: 10px;
+      padding-right: 40px;
+      padding-left: 10px;
+
+      &:hover + .order__icon {
+        opacity: 1;
+      }
     }
 
     &__btn {
@@ -189,6 +209,16 @@
         background-color: @color-light-orange;
         border-color: transparent;
       }
+    }
+
+    &__icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      fill: @color-text--second;
+      opacity: 0.6;
     }
   }
 }
