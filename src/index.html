@@ -48,12 +48,12 @@ To emphasise this I use inline style="display: none" -->
   </div>
   <nav class="main-nav main-nav--closed">
     <ul class="main-nav__list">
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Главная</a></li>
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Преимущества</a></li>
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Портфолио</a></li>
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Наши услуги</a></li>
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>
-      <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+      <li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+      <li class="main-nav__item"><a href="#section-features" class="main-nav__link">Преимущества</a></li>
+      <li class="main-nav__item"><a href="#section-portfolio" class="main-nav__link">Портфолио</a></li>
+      <li class="main-nav__item"><a href="#section-services" class="main-nav__link">Наши услуги</a></li>
+      <li class="main-nav__item"><a href="#section-testimonials" class="main-nav__link">Отзывы</a></li>
+      <li class="main-nav__item"><a href="#section-contacts" class="main-nav__link">Контакты</a></li>
     </ul>
     <section class="socials socials--hidden">
       <ul class="socials__list">
@@ -83,19 +83,19 @@ To emphasise this I use inline style="display: none" -->
       <div class="intro__inner">
         <h1 class="intro__title title">Дизайн <br> интерьеров</h1>
         <p class="intro__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
-        <a href="#" class="intro__btn btn">Заказать дизайн</a>
-        <button class="intro__button" type="button">
+        <a href="#section-order" class="intro__btn btn">Заказать дизайн</a>
+        <a href="#section-features" class="intro__button" type="button">
           <svg class="intro__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-arrow-down"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   </section>
 </header>
 
 <main class="page-content">
-  <section class="features">
+  <section class="features" id="section-features">
     <div class="container">
       <ul class="features__list">
         <li class="features__item">
@@ -118,7 +118,7 @@ To emphasise this I use inline style="display: none" -->
     </div>
   </section>
 
-  <section class="portfolio">
+  <section class="portfolio" id="section-portfolio">
     <div class="container">
       <h2 class="portfolio__title title">Портфолио</h2>
       <ul class="portfolio__tabs" data-tabs>
@@ -292,17 +292,17 @@ To emphasise this I use inline style="display: none" -->
     </div>
   </section>
 
-  <section class="services">
+  <section class="services" id="section-services">
     <div class="container">
       <h2 class="services__title title">Наши услуги</h2>
       <div class="services__wrapper">
         <ul class="services__tabs" data-tabs>
           <li class="services__tab active"><a data-tab href="#livingrooms" class="services__tab-link">Дизайн жилого <br> помещения</a></li>
-          <li class="services__tab"><a href="#rooms" class="services__tab-link">Дизайн отдельных <br> комнат</a></li>
-          <li class="services__tab"><a href="#commercial" class="services__tab-link">Дизайн коммерческих <br> объектов</a></li>
-          <li class="services__tab"><a href="#repair" class="services__tab-link">Ремонт под ключ</a></li>
-          <li class="services__tab"><a href="#completion-work" class="services__tab-link">Отделочные работы</a></li>
-          <li class="services__tab"><a href="#departure" class="services__tab-link">Выезд дизайнера <br> на дом</a></li>
+          <li class="services__tab"><a data-tab href="#rooms" class="services__tab-link">Дизайн отдельных <br> комнат</a></li>
+          <li class="services__tab"><a data-tab href="#commercial" class="services__tab-link">Дизайн коммерческих <br> объектов</a></li>
+          <li class="services__tab"><a data-tab href="#repair" class="services__tab-link">Ремонт под ключ</a></li>
+          <li class="services__tab"><a data-tab href="#completion-work" class="services__tab-link">Отделочные работы</a></li>
+          <li class="services__tab"><a data-tab href="#departure" class="services__tab-link">Выезд дизайнера <br> на дом</a></li>
         </ul>
         <div class="services__content" data-tabs-content>
           <div class="services__item tabs-pane active" id="livingrooms">
@@ -475,7 +475,7 @@ To emphasise this I use inline style="display: none" -->
     </div>
   </section>
 
-  <section class="order">
+  <section class="order" id="section-order">
     <div class="container">
       <form action="" class="order__form">
         <h2 class="order__title title">Мечтаете об интерьере от BRUME?</h2>
@@ -489,7 +489,7 @@ To emphasise this I use inline style="display: none" -->
     </div>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials" id="section-testimonials">
     <div class="container">
       <h2 class="testimonials__title title">Отзывы наших клиентов</h2>
       <div class="testimonials__wrapper">
@@ -502,7 +502,7 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <picture>
+              <picture class="testimonials__pic">
                 <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
                 <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
               </picture>
@@ -516,7 +516,7 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <picture>
+              <picture class="testimonials__pic">
                 <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
                 <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
               </picture>
@@ -530,7 +530,7 @@ To emphasise this I use inline style="display: none" -->
                 <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
                   В следующий раз обратимся к BRUME!</p>
               </div>
-              <picture>
+              <picture class="testimonials__pic">
                 <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
                 <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
               </picture>
@@ -548,7 +548,7 @@ To emphasise this I use inline style="display: none" -->
   </section>
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer" id="section-contacts">
   <div class="container">
     <div class="page-footer__wrapper">
       <small class="page-footer__copyright">BRUME interior, 2017 ©</small>
