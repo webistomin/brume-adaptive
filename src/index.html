@@ -5,15 +5,14 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <title>Brume: Design</title>
   <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Brume: дизайн студия интерьеров">
 </head>
 <body>
 <!-- this svg is a container for svg icons and should not appear on the page.
@@ -47,10 +46,10 @@ To emphasise this I use inline style="display: none" -->
           <img class="page-header__image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Brume">
         </picture>
       </figure>
-      <button class="page-header__toggle" type="button">
+      <button class="page-header__toggle" type="button" title="Меню">
         <span></span><span></span><span></span>
       </button>
-      <a href="tel:+78008234888" class="page-header__link">+7 (800) 823 48 88
+      <a href="tel:+78008234888" class="page-header__link" title="Позвонить менеджеру">+7 (800) 823 48 88
         <svg class="page-header__icon" width="23" height="23">
           <use x="0" y="0" xlink:href="#icon-call"></use>
         </svg>
@@ -68,17 +67,17 @@ To emphasise this I use inline style="display: none" -->
     </ul>
     <section class="socials socials--hidden">
       <ul class="socials__list">
-        <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Вконтакте">
           <svg class="socials__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-vk"></use>
           </svg>
         </a></li>
-        <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Инстаграм">
           <svg class="socials__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-insta"></use>
           </svg>
         </a></li>
-        <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Фейсбук">
           <svg class="socials__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-fb"></use>
           </svg>
@@ -122,7 +121,7 @@ To emphasise this I use inline style="display: none" -->
         <h1 class="intro__title title">Дизайн <br> интерьеров</h1>
         <p class="intro__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
         <a href="#section-order" data-scroll="" class="intro__btn btn">Заказать дизайн</a>
-        <a href="#section-features"data-scroll="" class="intro__button" type="button">
+        <a href="#section-features"data-scroll="" class="intro__button" type="button" title="Скролл вниз">
           <svg class="intro__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-arrow-down"></use>
           </svg>
@@ -584,7 +583,7 @@ To emphasise this I use inline style="display: none" -->
   <section class="video">
     <div class="container">
       <div class="video__inner">
-        <a href="https://www.youtube.com/watch?v=3KtJ2yZWErQ" class="video__btn mediabox" type="button">
+        <a href="https://www.youtube.com/watch?v=3KtJ2yZWErQ" class="video__btn mediabox" type="button" title="Включить видео">
           <svg class="video__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-play"></use>
           </svg>
@@ -631,19 +630,19 @@ To emphasise this I use inline style="display: none" -->
       <form action="" class="order__form">
         <h2 class="order__title title">Мечтаете об интерьере от BRUME?</h2>
         <p class="order__text">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</p>
-        <label class="order__label" for="order-name">
+        <label class="order__label">
           <input type="text" class="order__input" id="order-name" placeholder="Имя*" required autocomplete="off">
           <svg class="order__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-user"></use>
           </svg>
         </label>
-        <label class="order__label" for="order-phone">
+        <label class="order__label">
           <input type="tel" class="order__input" id="order-phone" placeholder="Телефон*" required pattern="^((\+7|7|8)+([0-9]){10})$" autocomplete="off">
           <svg class="order__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-number"></use>
           </svg>
         </label>
-        <label class="order__label" for="order-mail">
+        <label class="order__label">
           <input type="email" class="order__input" id="order-mail" placeholder="E-mail*" required autocomplete="off">
           <svg class="order__icon" width="23" height="23">
             <use x="0" y="0" xlink:href="#icon-mail"></use>
@@ -743,17 +742,17 @@ To emphasise this I use inline style="display: none" -->
         </figure>
         <section class="socials socials--footer">
           <ul class="socials__list">
-            <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Вконтакте">
               <svg class="socials__icon" width="23" height="23">
                 <use x="0" y="0" xlink:href="#icon-vk"></use>
               </svg>
             </a></li>
-            <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Инстаграм">
               <svg class="socials__icon" width="23" height="23">
                 <use x="0" y="0" xlink:href="#icon-insta"></use>
               </svg>
             </a></li>
-            <li class="socials__item"><a href="javascript:void(0);" class="socials__link">
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Фейсбук">
               <svg class="socials__icon" width="23" height="23">
                 <use x="0" y="0" xlink:href="#icon-fb"></use>
               </svg>
@@ -766,14 +765,24 @@ To emphasise this I use inline style="display: none" -->
   </div>
 </footer>
 
-
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var styles = ['css/style.min.css'];
+    styles.forEach(function (path) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = path;
+      document.head.appendChild(link);
+    });
+  });
+</script>
 <script
   src="https://code.jquery.com/jquery-1.11.0.min.js"
   integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="js/script.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
+<script src="js/script.min.js" defer></script>
 
 <script>
   $(document).ready(function(){
@@ -800,6 +809,7 @@ To emphasise this I use inline style="display: none" -->
       arrows: false,
       mobileFirst: true,
       slidesToShow: 1,
+      lazyLoad: 'ondemand',
       responsive: [
         {
           breakpoint: 479,
@@ -829,6 +839,7 @@ To emphasise this I use inline style="display: none" -->
       arrows: false,
       dots: true,
       appendDots: '.testimonials__pagination',
+      lazyLoad: 'ondemand',
       mobileFirst: true,
       slidesToShow: 1,
       responsive: [
