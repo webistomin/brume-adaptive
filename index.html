@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Brume: Design</title>
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Brume: дизайн студия интерьеров">
+</head>
+<body>
+<!-- this svg is a container for svg icons and should not appear on the page.
+To emphasise this I use inline style="display: none" -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="icon-arrow-left"><path d="M2.117 12l7.527 6.235L9 19l-9-7.521L9 4l.645.764L2.116 11H24v1H2.117z"/></symbol>
+  <symbol id="icon-arrow-right"><path d="M21.883 12l-7.527 6.235L15 19l9-7.521L15 4l-.645.764L21.884 11H0v1h21.883z"/></symbol>
+  <symbol id="icon-arrow-down" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></symbol>
+  <symbol id="icon-call" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795a618.8 618.8 0 0 1-2.064 1.011c-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026L8.396 0 6.29 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></symbol>
+  <symbol id="icon-fb" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/></symbol>
+  <symbol id="icon-insta" viewBox="0 0 24 24"><path d="M11.984 16.815a4.71 4.71 0 0 0 4.706-4.707 4.717 4.717 0 0 0-4.705-4.707c-.692 0-1.349.151-1.941.421a4.752 4.752 0 0 0-1.158.749 4.695 4.695 0 0 0-1.608 3.538 4.712 4.712 0 0 0 4.706 4.706zM12 8.631a3.479 3.479 0 1 1 0 6.957 3.479 3.479 0 0 1 0-6.957zM17.223 9H24v10.278A4.722 4.722 0 0 1 19.278 24H4.785C2.177 24 0 21.886 0 19.278V9h6.747a6.048 6.048 0 0 0-.872 3.109 6.109 6.109 0 1 0 12.218 0A6.047 6.047 0 0 0 17.223 9zm2.055-9H7v5H6V0H5v5H4V.077a4.79 4.79 0 0 0-1 .27V5H2V.898c-1.202.857-2 2.246-2 3.824V8h7.473a6.087 6.087 0 0 1 9.022 0H24V4.722A4.722 4.722 0 0 0 19.278 0zM22 5.265a.74.74 0 0 1-.745.735h-2.511A.74.74 0 0 1 18 5.265v-2.53A.74.74 0 0 1 18.744 2h2.511a.74.74 0 0 1 .745.735v2.53z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M0 3v18h24V3H0zm6.623 7.929L2 16.641V7.183l4.623 3.746zM2.482 5h19.035L12 12.713 2.482 5zm5.694 7.188L12 15.287l3.83-3.104L21.442 19H2.663l5.513-6.812zm9.208-1.264L22 7.183v9.348l-4.616-5.607z"/></symbol>
+  <symbol id="icon-number" viewBox="0 0 24 24"><path d="M3.59 1.322L6.434 0l4.041 7.89L7.75 9.231c-.538 1.259 2.159 6.289 3.297 6.372.09-.058 2.671-1.328 2.671-1.328l4.11 7.932s-2.764 1.354-2.854 1.396C7.113 27.194-4.127 5.345 3.59 1.322zm1.93 1.274L4.497 3.1c-5.294 2.762 4.177 21.185 9.648 18.686l.971-.474-2.271-4.383-1.026.5C8.656 18.976 3.557 9.21 6.764 7.491l1.007-.497L5.52 2.596zm7.832 7.649l2.917.87a3.03 3.03 0 0 0-.24-2.317 3.033 3.033 0 0 0-1.808-1.469l-.869 2.916zm1.804-6.059a6.302 6.302 0 0 1 3.756 3.051 6.3 6.3 0 0 1 .498 4.813l-1.795-.535a4.434 4.434 0 0 0-.352-3.387 4.422 4.422 0 0 0-2.643-2.146l.536-1.796zM16.106 1a9.61 9.61 0 0 1 5.729 4.656A9.61 9.61 0 0 1 22.596 13l-1.84-.548a7.709 7.709 0 0 0-.608-5.882 7.704 7.704 0 0 0-4.591-3.729L16.106 1z"/></symbol>
+  <symbol id="icon-play"><path d="M23 12L1 24V0l22 12zM2 22.315L20.912 12 2 1.685v20.63z"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><path d="M23.995 24H22c0-3.104.119-3.55-1.761-3.986-2.877-.664-5.594-1.291-6.584-3.458-.361-.791-.601-2.095.31-3.814 2.042-3.857 2.554-7.165 1.403-9.076-1.341-2.229-5.413-2.241-6.766.034-1.154 1.937-.635 5.227 1.424 9.025.93 1.712.697 3.02.338 3.815-.982 2.178-3.675 2.799-6.525 3.456C1.875 20.45 2 20.866 2 24H.005L0 22.759c0-2.52.199-3.975 3.178-4.663 3.365-.777 6.688-1.473 5.09-4.418C3.535 4.949 6.918 0 12 0c4.983 0 8.451 4.766 3.732 13.678-1.551 2.928 1.65 3.624 5.09 4.418 2.979.688 3.178 2.143 3.178 4.663L23.995 24zm-13.478-6l.91 2h1.164l.92-2h-2.994zm2.995 6l-.704-3h-1.615l-.704 3h3.023z"/></symbol>
+  <symbol id="icon-vk" viewBox="0 0 24 24"><path class="st0" d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486C22.864 8.997 25.22 6 23.136 6h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539A8.07 8.07 0 0 0 11.148 5c-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305C4.976 6.426 4.902 6 4.042 6H.787C.295 6 0 6.16 0 6.516c0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></symbol>
+</svg>
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="page-header__inner">
+      <figure class="page-header__logo">
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+          <img class="page-header__image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Brume">
+        </picture>
+      </figure>
+      <button class="page-header__toggle" type="button" title="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="tel:+78008234888" class="page-header__link" title="Позвонить менеджеру">+7 (800) 823 48 88
+        <svg class="page-header__icon" width="23" height="23">
+          <use x="0" y="0" xlink:href="#icon-call"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <nav class="main-nav main-nav--closed">
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+      <li class="main-nav__item"><a href="#section-features" class="main-nav__link" data-scroll>Преимущества</a></li>
+      <li class="main-nav__item"><a data-scroll="" href="#section-portfolio" class="main-nav__link">Портфолио</a></li>
+      <li class="main-nav__item"><a data-scroll="" href="#section-services" class="main-nav__link">Наши услуги</a></li>
+      <li class="main-nav__item"><a data-scroll="" href="#section-testimonials" class="main-nav__link">Отзывы</a></li>
+      <li class="main-nav__item"><a data-scroll="" href="#section-contacts" class="main-nav__link">Контакты</a></li>
+    </ul>
+    <section class="socials socials--hidden">
+      <ul class="socials__list">
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Вконтакте">
+          <svg class="socials__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-vk"></use>
+          </svg>
+        </a></li>
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Инстаграм">
+          <svg class="socials__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-insta"></use>
+          </svg>
+        </a></li>
+        <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Фейсбук">
+          <svg class="socials__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-fb"></use>
+          </svg>
+        </a></li>
+      </ul>
+    </section>
+  </nav>
+  <section class="intro">
+    <div class="container intro__container intro__container--relative">
+      <div class="intro__slider">
+        <ul class="intro__list">
+          <li class="intro__item">
+            <figure class="intro__pic">
+              <picture>
+                <source type="image/webp" srcset="img/header-slide-desktop.webp 1x, img/header-slide-desktop@2x.webp 2x">
+                <img class="intro__img" src="img/header-slide-desktop.jpg" srcset="img/header-slide-desktop@2x.jpg 2x" alt="">
+              </picture>
+            </figure>
+          </li>
+          <li class="intro__item">
+            <figure class="intro__pic">
+              <picture>
+                <source type="image/webp" srcset="img/header-slide-desktop.webp 1x, img/header-slide-desktop@2x.webp 2x">
+                <img class="intro__img" src="img/header-slide-desktop.jpg" srcset="img/header-slide-desktop@2x.jpg 2x" alt="">
+              </picture>
+            </figure>
+          </li>
+          <li class="intro__item">
+            <figure class="intro__pic">
+              <picture>
+                <source type="image/webp" srcset="img/header-slide-desktop.webp 1x, img/header-slide-desktop@2x.webp 2x">
+                <img class="intro__img" src="img/header-slide-desktop.jpg" srcset="img/header-slide-desktop@2x.jpg 2x" alt="">
+              </picture>
+            </figure>
+          </li>
+
+        </ul>
+        <ul class="intro__pagination"></ul>
+      </div>
+      <div class="intro__inner">
+        <h1 class="intro__title title">Дизайн <br> интерьеров</h1>
+        <p class="intro__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
+        <a href="#section-order" data-scroll="" class="intro__btn btn">Заказать дизайн</a>
+        <a href="#section-features"data-scroll="" class="intro__button" type="button" title="Скролл вниз">
+          <svg class="intro__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-arrow-down"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main class="page-content">
+  <section class="features" id="section-features">
+    <div class="container">
+      <ul class="features__list">
+        <li class="features__item">
+          <span class="features__heading">Берем весь ремонт <br> на себя</span>
+          <p class="features__text">Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
+        </li>
+        <li class="features__item">
+          <span class="features__heading">Мы - профессионалы <br> своего дела</span>
+          <p class="features__text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги, а студия уже реализовала свыше 1000 дизайн-проектов</p>
+        </li>
+        <li class="features__item">
+          <span class="features__heading">Наши проекты <br> индивидуальны</span>
+          <p class="features__text">Каждый, созданный студией, интерьер - индивидуальное         и максимально продуманное решение для каждого вида помещения</p>
+        </li>
+        <li class="features__item">
+          <span class="features__heading">Рабатаем на выгодных <br> условиях</span>
+          <p class="features__text">Ценовая политика студии очень лояльна,  мы осуществляем контроль всего процесса работы  и получаем результат который делает клиентов счастивыми</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="portfolio" id="section-portfolio">
+    <div class="container">
+      <h2 class="portfolio__title title">Портфолио</h2>
+      <ul class="portfolio__tabs" data-tabs>
+        <li class="portfolio__tab active"><a data-tab href="#all" class="portfolio__tab-link">Все проекты</a></li>
+        <li class="portfolio__tab"><a data-tab href="#design" class="portfolio__tab-link">Дизайн интерьеров</a></li>
+        <li class="portfolio__tab"><a data-tab href="#completion" class="portfolio__tab-link">Отделочные работы</a></li>
+      </ul>
+      <div class="portfolio__content" data-tabs-content>
+        <ul class="portfolio__list tabs-pane active" data-tabs-pane id="all">
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.webp 1x, img/portfolio-slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg 1x, img/portfolio-slide-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.webp 1x, img/portfolio-slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.jpg 1x, img/portfolio-slide-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.webp 1x, img/portfolio-slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.jpg 1x, img/portfolio-slide-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.webp 1x, img/portfolio-slide-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.jpg 1x, img/portfolio-slide-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.webp 1x, img/portfolio-slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg 1x, img/portfolio-slide-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.webp 1x, img/portfolio-slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.jpg 1x, img/portfolio-slide-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.webp 1x, img/portfolio-slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.jpg 1x, img/portfolio-slide-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.webp 1x, img/portfolio-slide-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.jpg 1x, img/portfolio-slide-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+        </ul>
+        <ul class="portfolio__list tabs-pane" data-tabs-pane id="design">
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.webp 1x, img/portfolio-slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg 1x, img/portfolio-slide-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.webp 1x, img/portfolio-slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.jpg 1x, img/portfolio-slide-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.webp 1x, img/portfolio-slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.jpg 1x, img/portfolio-slide-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.webp 1x, img/portfolio-slide-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.jpg 1x, img/portfolio-slide-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+        </ul>
+        <ul class="portfolio__list tabs-pane" data-tabs-pane id="completion">
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.webp 1x, img/portfolio-slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-1-desktop.jpg 1x, img/portfolio-slide-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.webp 1x, img/portfolio-slide-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-2-desktop.jpg 1x, img/portfolio-slide-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн интерьера гостиной</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.webp 1x, img/portfolio-slide-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-3-desktop.jpg 1x, img/portfolio-slide-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Дизайн столовой <br> в стиле «Бохо»</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+          <li class="portfolio__item">
+            <figure class="portfolio__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.webp 1x, img/portfolio-slide-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.webp 1x, img/portfolio-slide-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/portfolio-slide-mobile.webp 1x, img/portfolio-slide-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/portfolio-slide-4-desktop.jpg 1x, img/portfolio-slide-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/portfolio-slide-tablet.jpg 1x, img/portfolio-slide-tablet@2x.jpg 2x">
+                <img class="portfolio__img" src="img/portfolio-slide-mobile.jpg" srcset="img/portfolio-slide-mobile@2x.jpg 2x" alt="Brume">
+              </picture>
+              <figcaption class="portfolio__caption">Лофт интерьер <br> для отеля Hiloft</figcaption>
+              <span class="portfolio__category">Дизайн интерьеров</span>
+            </figure>
+            <a href="javascript: void(0);" class="portfolio__btn"></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="section-services">
+    <div class="container">
+      <h2 class="services__title title">Наши услуги</h2>
+      <div class="services__wrapper">
+        <ul class="services__tabs" data-tabs>
+          <li class="services__tab active"><a data-tab href="#livingrooms" class="services__tab-link">Дизайн жилого <br> помещения</a></li>
+          <li class="services__tab"><a data-tab href="#rooms" class="services__tab-link">Дизайн отдельных <br> комнат</a></li>
+          <li class="services__tab"><a data-tab href="#commercial" class="services__tab-link">Дизайн коммерческих <br> объектов</a></li>
+          <li class="services__tab"><a data-tab href="#repair" class="services__tab-link">Ремонт под ключ</a></li>
+          <li class="services__tab"><a data-tab href="#completion-work" class="services__tab-link">Отделочные работы</a></li>
+          <li class="services__tab"><a data-tab href="#departure" class="services__tab-link">Выезд дизайнера <br> на дом</a></li>
+        </ul>
+        <div class="services__content" data-tabs-content>
+          <div class="services__item tabs-pane active" id="livingrooms" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Дизайн жилого помещения</h3>
+              <span class="services__counter">4 проекта</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order" data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+          <div class="services__item tabs-pane" id="rooms" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Дизайн отдельных комнат</h3>
+              <span class="services__counter">10 проектов</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order" data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+          <div class="services__item tabs-pane" id="commercial" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Дизайн комерческих объетов</h3>
+              <span class="services__counter">532 проекта</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order"data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+          <div class="services__item tabs-pane" id="repair" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Ремонт под ключ</h3>
+              <span class="services__counter">2 проекта</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order" data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+          <div class="services__item tabs-pane" id="completion-work" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Отделочные работы</h3>
+              <span class="services__counter">532 проекта</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order" data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+          <div class="services__item tabs-pane" id="departure" data-tabs-pane>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/services-desktop.webp 1x, img/services-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/services-tablet.webp 1x, img/services-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/services-mobile.webp 1x, img/services-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/services-desktop.jpg 1x, img/services-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/services-tablet.jpg 1x, img/services-tablet@2x.jpg 2x">
+              <img class="services__img" src="img/services-mobile.jpg" srcset="img/services-mobile@2x.jpg 2x" alt="Brume">
+            </picture>
+            <div class="services__inner">
+              <h3 class="services__title title">Выезд дизайнера на дом</h3>
+              <span class="services__counter">100 проектов</span>
+            </div>
+            <div class="services__inner services__inner--row">
+              <p class="services__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+              </p>
+              <a href="#section-order" data-scroll class="services__btn btn">Консультация</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video">
+    <div class="container">
+      <div class="video__inner">
+        <a href="https://www.youtube.com/watch?v=3KtJ2yZWErQ" class="video__btn mediabox" type="button" title="Включить видео">
+          <svg class="video__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-play"></use>
+          </svg>
+        </a>
+        <p class="video__desc">О  студии дизайна интерьеров BRUME за 2 минуты</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="container">
+      <h2 class="work__title title">Этапы работы</h2>
+      <ul class="work__list">
+        <li class="work__item">
+          <span class="work__heading">Консультация</span>
+          <p class="work__text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
+        </li>
+        <li class="work__item">
+          <span class="work__heading">Техническое задание</span>
+          <p class="work__text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
+        </li>
+        <li class="work__item">
+          <span class="work__heading">Замеры и планировка</span>
+          <p class="work__text">Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы</p>
+        </li>
+        <li class="work__item">
+          <span class="work__heading">Дизайн-концепция</span>
+          <p class="work__text">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. Подбираем мебель.</p>
+        </li>
+        <li class="work__item">
+          <span class="work__heading">3D Визуализация</span>
+          <p class="work__text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..</p>
+        </li>
+        <li class="work__item">
+          <span class="work__heading">Комплектация интерьера</span>
+          <p class="work__text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="order" id="section-order">
+    <div class="container">
+      <form action="" class="order__form">
+        <h2 class="order__title title">Мечтаете об интерьере от BRUME?</h2>
+        <p class="order__text">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</p>
+        <label class="order__label">
+          <input type="text" class="order__input" id="order-name" placeholder="Имя*" required autocomplete="off">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-user"></use>
+          </svg>
+        </label>
+        <label class="order__label">
+          <input type="tel" class="order__input" id="order-phone" placeholder="Телефон*" required pattern="^((\+7|7|8)+([0-9]){10})$" autocomplete="off">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-number"></use>
+          </svg>
+        </label>
+        <label class="order__label">
+          <input type="email" class="order__input" id="order-mail" placeholder="E-mail*" required autocomplete="off">
+          <svg class="order__icon" width="23" height="23">
+            <use x="0" y="0" xlink:href="#icon-mail"></use>
+          </svg>
+        </label>
+        <button class="order__btn btn" type="submit">Отправить</button>
+        <p class="order__text order__text--small">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="testimonials" id="section-testimonials">
+    <div class="container">
+      <h2 class="testimonials__title title">Отзывы наших клиентов</h2>
+      <div class="testimonials__wrapper">
+        <ul class="testimonials__list" id="testimonials">
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <picture class="testimonials__pic">
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
+            </div>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <picture class="testimonials__pic">
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
+            </div>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <picture class="testimonials__pic">
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
+            </div>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <picture class="testimonials__pic">
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="testimonials__pagination">
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer" id="section-contacts">
+  <div class="container">
+    <div class="page-footer__wrapper">
+      <small class="page-footer__copyright">BRUME interior, 2017 ©</small>
+      <div class="page-footer__inner">
+        <figure class="page-footer__logo">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/logo-footer-desktop.webp 1x, img/logo-footer-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/logo-footer-desktop.png 1x, img/logo-footer-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
+            <img class="page-footer__img" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Brume">
+          </picture>
+        </figure>
+        <section class="socials socials--footer">
+          <ul class="socials__list">
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Вконтакте">
+              <svg class="socials__icon" width="23" height="23">
+                <use x="0" y="0" xlink:href="#icon-vk"></use>
+              </svg>
+            </a></li>
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Инстаграм">
+              <svg class="socials__icon" width="23" height="23">
+                <use x="0" y="0" xlink:href="#icon-insta"></use>
+              </svg>
+            </a></li>
+            <li class="socials__item"><a href="javascript:void(0);" class="socials__link" title="Фейсбук">
+              <svg class="socials__icon" width="23" height="23">
+                <use x="0" y="0" xlink:href="#icon-fb"></use>
+              </svg>
+            </a></li>
+          </ul>
+        </section>
+      </div>
+      <a href="https://www.behance.net/sashababos184a" class="page-footer__link">HolodnayaDesign</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var styles = ['css/style.min.css'];
+    styles.forEach(function (path) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = path;
+      document.head.appendChild(link);
+    });
+  });
+</script>
+<script
+  src="https://code.jquery.com/jquery-1.11.0.min.js"
+  integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
+<script src="js/script.min.js" defer></script>
+
+<script>
+  $(document).ready(function(){
+    $('.intro__list').slick({
+      autoplay: true,
+      arrows: false,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            appendDots: '.intro__pagination',
+          }
+        }]
+  });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.portfolio__list').slick({
+      autoplay: true,
+      arrows: false,
+      mobileFirst: true,
+      slidesToShow: 1,
+      lazyLoad: 'ondemand',
+      responsive: [
+        {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 659,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 4
+          }
+        }]
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.testimonials__list').slick({
+      autoplay: true,
+      arrows: false,
+      dots: true,
+      appendDots: '.testimonials__pagination',
+      lazyLoad: 'ondemand',
+      mobileFirst: true,
+      slidesToShow: 1,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 1,
+          }
+        }]
+    });
+  });
+</script>
+</body>
+</html>
