@@ -148,20 +148,30 @@
   }
 
   @media @screen-lg {
-    background-image: url("../img/order-desktop.jpg");
+    background-image: none;
     min-height: initial;
     padding-bottom: 80px;
-    background-size: contain;
-
-    @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-      background-image: url("../img/order-desktop@2x.jpg");
-    }
 
     &::before {
       width: 50%;
       opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: url("../img/order-desktop.jpg");
+      background-size: cover;
+
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        background-image: url("../img/order-desktop@2x.jpg");
+      }
     }
 
     &__form {

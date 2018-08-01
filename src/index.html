@@ -621,7 +621,7 @@ To emphasise this I use inline style="display: none" -->
 
   <section class="order" id="section-order">
     <div class="container">
-      <form action="" class="order__form">
+      <form action="" class="order__form" autocomplete="off">
         <h2 class="order__title title">Мечтаете об интерьере от BRUME?</h2>
         <p class="order__text">Оставьте контактные данные, менеджер свяжется с вами         в течении 15 минут, для уточнения всех деталей.</p>
         <label class="order__label" for="order-name">
@@ -653,6 +653,20 @@ To emphasise this I use inline style="display: none" -->
       <h2 class="testimonials__title title">Отзывы наших клиентов</h2>
       <div class="testimonials__wrapper">
         <ul class="testimonials__list" id="testimonials">
+          <li class="testimonials__item">
+            <div class="testimonials__inner">
+              <div class="testimonials__column">
+                <span class="testimonials__name">Александра Холодная</span>
+                <span class="testimonials__category">Услуга: инерьер детской</span>
+                <p class="testimonials__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.
+                  В следующий раз обратимся к BRUME!</p>
+              </div>
+              <picture class="testimonials__pic">
+                <source type="image/webp" srcset="img/testimonials-mobile.webp 1x, img/testimonials-mobile@2x.webp 2x">
+                <img class="testimonials__img" src="img/testimonials-mobile.jpg" srcset="img/testimonials-mobile@2x.jpg 2x" alt="Александра Холодная">
+              </picture>
+            </div>
+          </li>
           <li class="testimonials__item">
             <div class="testimonials__inner">
               <div class="testimonials__column">
