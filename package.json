@@ -2,13 +2,13 @@
     "name": "cat-energy",
     "version": "0.1.0",
     "private": true,
-    "description": "Личный проект «Cat Energy»",
+    "description": "Личный проект «Brume»",
     "author": "Алексей Истомин",
     "repository": {
         "type": "git",
-        "url": "git@github.com:webistomin/cat-energy.git"
+        "url": "git@github.com:webistomin/brume-adaptive.git"
     },
-    "homepage": "https://github.com/webistomin/cat-energy",
+    "homepage": "https://github.com/webistomin/brume-adaptive",
     "devDependencies": {
         "@htmlacademy/editorconfig-cli": "1.0.0",
         "autoprefixer": "7.1.2",
